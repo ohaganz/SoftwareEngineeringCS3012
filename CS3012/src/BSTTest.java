@@ -60,5 +60,14 @@ class BSTTest {
 		assertEquals( "((()A())B(()D()))", bst.printTree());
 		
 	}
+	
+	@Test
+	public void testGet() {
+		
+		BST<Character, Character> bst = new BST<Character, Character>();
+		//testing get on empty tree
+		assertNull(bst.get('A'));
+		
+	}
 
 }
