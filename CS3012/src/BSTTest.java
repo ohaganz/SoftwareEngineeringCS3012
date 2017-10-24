@@ -75,6 +75,10 @@ class BSTTest {
 		//testing get on node contained in the tree
 		
 	     assertEquals('C',(char)bst.get('C'));// have to cast to char
+	     
+	     //testing get on node not contained in the tree
+	     assertNull(bst.get('X'));
+	     
 		
 	}
 
