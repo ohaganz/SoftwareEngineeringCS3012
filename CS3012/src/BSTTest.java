@@ -137,6 +137,8 @@ class BSTTest {
         					 //         5
 		
         assertEquals(6,(int)bst2.lowestCommonAncestor(3,7));
+        assertEquals(9,(int)bst2.lowestCommonAncestor(2,10));
+
         
 		
 		
