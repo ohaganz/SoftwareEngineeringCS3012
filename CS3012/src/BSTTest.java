@@ -139,8 +139,11 @@ class BSTTest {
         //testing LCA on mulitple nodes
         assertEquals(6,(int)bst2.lowestCommonAncestor(3,7));
         assertEquals(9,(int)bst2.lowestCommonAncestor(2,10));
-        // testing LCA if node if two nodes entered are the same
+        // testing LCA if two nodes entered are the same
         assertEquals(5,(int)bst2.lowestCommonAncestor(5,5));
+        //testing LCA if node entered is the root
+        assertEquals(9,(int)bst2.lowestCommonAncestor(9,9));
+
 
 
         
