@@ -100,8 +100,16 @@ class BSTTest {
 		
 		//testing delete a leaf from constructed tree
 		bst.delete(8);
-		assertEquals("((()5())6(()7()))",bst.printTree());
+		assertEquals("(()5(()6(()7())))",bst.printTree());
+		
+		//testing delete on node not present
+		bst.delete(10);
+		assertEquals("(()5(()6(()7())))",bst.printTree());
+
+		
 		
 	}
+	
+	
 
 }
