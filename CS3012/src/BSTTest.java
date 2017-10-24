@@ -74,7 +74,7 @@ class BSTTest {
 	     bst.insert('C', 'C');
 		//testing get on node contained in the tree
 		
-	     assertEquals('C',bst.get('C'));
+	     assertEquals('C',(char)bst.get('C'));// have to cast to char
 		
 	}
 
