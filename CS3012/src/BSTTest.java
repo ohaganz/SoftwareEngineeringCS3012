@@ -68,6 +68,14 @@ class BSTTest {
 		//testing get on empty tree
 		assertNull(bst.get('A'));
 		
+		
+		bst.insert('A', 'A');
+	     bst.insert('B', 'B');
+	     bst.insert('C', 'C');
+		//testing get on node contained in the tree
+		
+	     assertEquals('C',bst.get('C'));
+		
 	}
 
 }
