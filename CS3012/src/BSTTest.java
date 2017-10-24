@@ -50,6 +50,7 @@ class BSTTest {
 		
 	
 		
+		
 		//Testing insert of null value. (Should delete node)
 		bst.insert('C', null);
 		assertEquals("((()A())B(()D()))", bst.printTree());
@@ -80,6 +81,16 @@ class BSTTest {
 	     assertNull(bst.get('X'));
 	     
 		
+	}
+	
+	@Test
+	public void testDelete() {
+		
+		BST<Integer, Integer> bst = new BST<Integer, Integer>();
+		
+		//testing delete on empty tree
+		bst.delete(5);
+		assertNull(bst.printTree());
 	}
 
 }
