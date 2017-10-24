@@ -106,6 +106,23 @@ class BSTTest {
 		bst.delete(10);
 		assertEquals("(()5(()6(()7())))",bst.printTree());
 
+	}
+	
+	@Test
+	public void testlowestCommonAncestor() {
+		
+		BST<Integer, Integer> bst= new BST<Integer, Integer>();
+		
+		//Testing LCA on empty tree.
+		assertNull(bst.lowestCommonAncestor(1, 2));
+			
+		//Testing LCA on a one node tree
+		bst.insert(1, 1);
+		//testing when neither keys are present
+		assertNull(bst.lowestCommonAncestor(2,3));
+		//testing when one key is present - should still be null
+		assertNull(bst.lowestCommonAncestor(1,2));
+		
 		
 		
 	}
