@@ -90,7 +90,7 @@ class BSTTest {
 		
 		//testing delete on empty tree
 		bst.delete(5);
-		assertNull(bst.printTree());
+		assertEquals("()",bst.printTree());
 	}
 
 }
