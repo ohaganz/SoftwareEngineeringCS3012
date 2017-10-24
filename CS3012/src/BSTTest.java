@@ -136,8 +136,12 @@ class BSTTest {
         bst2.insert(5, 5);   //        \
         					 //         5
 		
+        //testing LCA on mulitple nodes
         assertEquals(6,(int)bst2.lowestCommonAncestor(3,7));
         assertEquals(9,(int)bst2.lowestCommonAncestor(2,10));
+        // testing LCA if node if two nodes entered are the same
+        assertEquals(5,(int)bst2.lowestCommonAncestor(5,5));
+
 
         
 		
