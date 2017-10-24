@@ -111,17 +111,34 @@ class BSTTest {
 	@Test
 	public void testlowestCommonAncestor() {
 		
-		BST<Integer, Integer> bst= new BST<Integer, Integer>();
+		BST<Integer, Integer> bst1= new BST<Integer, Integer>();
+		BST<Integer, Integer> bst2= new BST<Integer, Integer>();
 		
 		//Testing LCA on empty tree.
-		assertNull(bst.lowestCommonAncestor(1, 2));
+		assertNull(bst1.lowestCommonAncestor(1, 2));
 			
 		//Testing LCA on a one node tree
-		bst.insert(1, 1);
+		bst1.insert(1, 1);
 		//testing when neither keys are present
-		assertNull(bst.lowestCommonAncestor(2,3));
+		assertNull(bst1.lowestCommonAncestor(2,3));
 		//testing when one key is present - should still be null
-		assertNull(bst.lowestCommonAncestor(1,2));
+		assertNull(bst1.lowestCommonAncestor(1,2));
+		
+		//constructing a tree to test LCA
+
+       	bst2.insert(9, 9);   //        _9_
+        bst2.insert(10, 10);   //      /     \
+        bst2.insert(6, 6);   //    _6_      10
+        bst2.insert(3, 3);   //  /     \
+        bst2.insert(2, 2);   // 3       7
+        bst2.insert(7, 7);   //  \     /
+        bst2.insert(4, 4);   //   2   4
+        bst2.insert(5, 5);   //        \
+        					 //         5
+		
+        
+		
+		
 		
 		
 		
