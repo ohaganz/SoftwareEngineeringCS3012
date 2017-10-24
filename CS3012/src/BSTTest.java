@@ -91,6 +91,17 @@ class BSTTest {
 		//testing delete on empty tree
 		bst.delete(5);
 		assertEquals("()",bst.printTree());
+		
+		//constructing a tree to test delete on
+		bst.insert(5,5);
+		bst.insert(6,6);
+		bst.insert(7,7);
+		bst.insert(8,8);
+		
+		//testing delete a leaf from constructed tree
+		bst.delete(8);
+		assertEquals("((()5())6(()7()))",bst.printTree());
+		
 	}
 
 }
