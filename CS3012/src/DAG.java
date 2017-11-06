@@ -19,6 +19,18 @@ public class DAG {
 	    public void addParent(Node parent) {
 	    	parents.add(parent);
 	    }
+	    
+	    public Node createUnlinkedNode(int key) {
+	    	return new Node(key);
+	    }
+	    
+	    public void linkNodes(Node x, Node y) {
+	    	x.addChild(y);
+	    	
+	    	y.addParent(x);
+	    }
+	    
+	    
 	}
     
 }
