@@ -12,6 +12,13 @@ public class DAG {
 	    	this.key=key;
 	    }
 	    
+	    public void addChild(Node child) {
+	    	children.add(child);
+	    }
+	    
+	    public void addParent(Node parent) {
+	    	parents.add(parent);
+	    }
 	}
     
 }
