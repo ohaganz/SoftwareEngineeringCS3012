@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class DAG {
 	
-	public class Node {
+	public static class Node {
 		
 	    private int key;
 	    private ArrayList<Node> children = new ArrayList<Node>();
@@ -20,11 +20,11 @@ public class DAG {
 	    	parents.add(parent);
 	    }
 	    
-	    public Node createUnlinkedNode(int key) {
+	    public static Node createUnlinkedNode(int key) {
 	    	return new Node(key);
 	    }
 	    
-	    public void linkNodes(Node x, Node y) {
+	    public static void linkNodes(Node x, Node y) {
 	    	x.addChild(y);
 	    	
 	    	y.addParent(x);
@@ -45,6 +45,32 @@ public class DAG {
 	    	}
 	    }
 	    
+	    public static void main(String[] args) {
+			
+	
+			
+			Node n1 = createUnlinkedNode(1);
+			Node n2 = createUnlinkedNode(2);			
+			Node n3 = createUnlinkedNode(3);
+			Node n4 = createUnlinkedNode(4);
+			Node n5 = createUnlinkedNode(5);
+			Node n6 = createUnlinkedNode(6);
+			Node n7 = createUnlinkedNode(7);
+			
+			linkNodes(n1, n3);
+			linkNodes(n2, n4);
+			linkNodes(n3, n4);
+			linkNodes(n3, n5);
+			linkNodes(n3, n6);
+			linkNodes(n4, n6);
+			linkNodes(n5, n6);
+			linkNodes(n6, n7);
+			
+			
+		}
+	    
 	}
+	
+	
     
 }
